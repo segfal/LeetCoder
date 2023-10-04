@@ -213,7 +213,7 @@ async def leetcode(ctx):
 
 @bot.command()
 async def bloomberg(ctx):
-    await ctx.send(random.choice(bloomberg) + "\n");
+    await ctx.send(f"Bloomberg {random.choice(bloomberg)}" + "\n");
 
 @bot.command()
 async def amazon(ctx):
