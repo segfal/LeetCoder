@@ -4,7 +4,7 @@ import os
 import discord
 from discord.ext import commands
 import random
-from random import *
+
 
 
 
@@ -119,7 +119,7 @@ medium = [
 ]
 
 
-bloomberg = [
+bloomberg_arr = [
 "https://leetcode.com/problems/insert-delete-getrandom-o1/",
 "https://leetcode.com/problems/design-underground-system/",
 "https://leetcode.com/problems/decode-string/",
@@ -214,7 +214,7 @@ async def leetcode(ctx):
 
 @bot.command()
 async def bloomberg(ctx):
-    await ctx.send(f"Bloomberg {random.choice(bloomberg)}" + "\n");
+    await ctx.send(f"Bloomberg {random.choice(bloomberg_arr)}" + "\n");
 
 @bot.command()
 async def amazon(ctx):
