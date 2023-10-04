@@ -200,16 +200,16 @@ async def leetcode(ctx):
     medium_problem_num = medium_question.split("/")[-2]
     medium_problem_title = medium_question.split("/")[-1]
     msg = f'''
-        # Easy Question : {easy_problem_num} {easy_problem_title} \n
+        ***Easy Question*** : {easy_problem_num} {easy_problem_title} \n
         Problem Link: {easy_question} \n
-        # Medium Question : {medium_problem_num} {medium_problem_title} \n
+        ***Medium Question*** : {medium_problem_num} {medium_problem_title} \n
         Problem Link: {medium_question} \n
 
 
 
     '''
     await ctx.send(msg)
-    
+
 
 @bot.command()
 async def bloomberg(ctx):
