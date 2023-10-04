@@ -192,7 +192,24 @@ async def hello(ctx):
 #if user types !easy, bot will send a random easy question
 @bot.command()
 async def leetcode(ctx):
-    await ctx.send(random.choice(easy) + "\n" + random.choice(medium) + "\n");
+    easy_question = random.choice(easy)
+    medium_question = random.choice(medium)
+    #get the problem number and title
+    easy_problem_num = easy_question.split("/")[-2]
+    easy_problem_title = easy_question.split("/")[-1]
+    medium_problem_num = medium_question.split("/")[-2]
+    medium_problem_title = medium_question.split("/")[-1]
+    msg = f'''
+        # Easy Question : {easy_problem_num} {easy_problem_title} \n
+        Problem Link: {easy_question} \n
+        # Medium Question : {medium_problem_num} {medium_problem_title} \n
+        Problem Link: {medium_question} \n
+
+
+
+    '''
+    await ctx.send(msg)
+    
 
 @bot.command()
 async def bloomberg(ctx):
